@@ -129,7 +129,7 @@ def main():
 def habijabi():
     print('-----')
     global cap,file,encodeListKnown,encodeListKnownWithIds,detectID,imgStudent,studentInfo,pixi
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     # cap.set(3, 640)
     # cap.set(4, 480)
 
@@ -152,7 +152,7 @@ def habijabi():
     rate = pixi.getProperty('rate')
     pixi.setProperty('rate', rate - 30)
     voices = pixi.getProperty('voices')
-    pixi.setProperty('voice', voices[0].id)
+    pixi.setProperty('voice', voices[1].id)
     main()
 
 

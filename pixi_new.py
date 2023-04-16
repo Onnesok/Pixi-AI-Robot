@@ -15,15 +15,15 @@ import subprocess
 import sys
 import os
 
-welcome = ['Hello Boss. I am pixi, An Autonomous Humanoid Robot. How can I help you?','Hi Sir! I am Pixi. Ask me your question please.',"Hello Sir, I am Pixi. How may I help?","Its Pixi. How Can I help?"]
+welcome = ['Hello Boss. I am gorky, An Autonomous Humanoid Robot. How can I help you?','Hi Sir! I am gorky. Ask me your question please.',"Hello Sir, I am gorky. How may I help?","Its gorky. How Can I help?"]
 listener = sr.Recognizer()
-pixi = pyttsx3.init()
-rate = pixi.getProperty('rate')
-pixi.setProperty('rate', rate - 30)
-voices = pixi.getProperty('voices')
-pixi.setProperty('voice', voices[0].id)
-pixi.say(welcome[random.randint(0,3)])
-pixi.runAndWait()
+gorky = pyttsx3.init()
+rate = gorky.getProperty('rate')
+gorky.setProperty('rate', rate - 30)
+voices = gorky.getProperty('voices')
+gorky.setProperty('voice', voices[1].id)
+gorky.say(welcome[random.randint(0,3)])
+gorky.runAndWait()
 
 # Wish Me
 def wishMe():
@@ -39,8 +39,8 @@ def wishMe():
   
 # Talk a string
 def talk(x):
-    pixi.say(x)
-    pixi.runAndWait() 
+    gorky.say(x)
+    gorky.runAndWait() 
 
 # Normal kotha    
 def normal():
@@ -57,7 +57,7 @@ def time(command):
 
 def takeCommand():
     r = sr.Recognizer()
-    with sr.Microphone(1) as source:
+    with sr.Microphone(0) as source:
         print('Listening')
         r.pause_threshold = 0.5  
         # r.adjust_for_ambient_noise(source,duration= 0.5)
@@ -86,7 +86,7 @@ def takeCommand():
                 talk('I was created in 2022 by some students of European University of Bangladesh.')
 
             elif 'your name' in command:
-                talk('My name is Pixi, an Autonomous humanoid Robot')
+                talk('My name is gorky, an Autonomous humanoid Robot')
 
             elif 'father' in command or 'daddy' in command:
                 talk('I do not have any biological father Technically this is impossible.')
