@@ -16,8 +16,10 @@ To set up the project, follow these steps:
 2. Install the required libraries listed in the requirements.txt file.
 3. Connect the USB Camera Module, USB Speaker and the USB microphone to the Raspberry Pi.
 4. Flash the operating system onto the Raspberry Pi and configure it to run headlessly.
-5. Run the main program using the command python pixi_new.py.
-
+5. Run the main program using the command-
+```
+python pixi_new.py.
+```
 ### Usage
 The robot is designed to recognize human faces and respond to voice commands. The robot's behavior is controlled by the main.py program, which runs on the Raspberry Pi.
 To interact with the robot, stand in front of it and wait for it to recognize your face. Once it recognizes you, you can give it voice commands, such as "Hello Pixi" or "What is your name?". The robot will respond to your commands in a natural way, using synthesized speech and robotic movements.
